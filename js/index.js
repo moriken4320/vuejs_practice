@@ -1,25 +1,41 @@
 let app = new Vue({
     el: '#app',
     data: {
-        current: new Date().toLocaleString(),
+        message: 'message'
     },
-
-    computed: {
-        // 算出プロパティ経由で乱数を取得
-        randomc: function() {
-            return Math.random();
-        },
-    },
-
     methods: {
-        // クリック時に処理を実行
-        onclick: function() {
-            this.current = new Date().toLocaleString();
-        },
-
-        // メソッド経由で乱数を取得
-        randomm: function(){
-            return Math.random();
+        onclick: function(){
+            this.message = 'メッセージ';
         }
     },
+    
+    beforeCreate() {
+        console.log('beforeCrearte...');
+    },
+    created() {
+        console.log('created...');
+    },
+    beforeMount() {
+        console.log('beforeMount...');
+    },
+    mounted() {
+        console.log('mounted...');
+    },
+    beforeUpdate() {
+        console.log('beforeUpdate...');
+    },
+    updated() {
+        console.log('updated...');
+    },
+    beforeDestroy() {
+        console.log('beforeDestroy...');
+    },
+    destroyed() {
+        console.log('destroyed...');
+    },
 });
+
+// 3000ミリ秒のあとに破棄
+setTimeout(function() {
+   app.$destroy(); 
+}, 3000);
