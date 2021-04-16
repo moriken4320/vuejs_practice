@@ -8,11 +8,13 @@
 </head>
 <body>
     <div id="app">
-        <p v-pre>{{ message }}</p>
-        <a :href="url">Google</a>
-        <input type="button" value="クリック" :disabled="flag">
-        <p>{{ localEmail_property }}</p>
-        <p>{{ localEmail_method() }}</p>
+        <form>
+            <input type="button" value="クリック" v-on:click="onclick">
+        </form>
+        <div>算出プロパティ：{{ randomc }}</div>
+        <div>メソッド：{{ randomm() }}</div>
+        <div>現在日時：{{ current }}</div>
+        <div>{{ test }}</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>

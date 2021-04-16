@@ -1,22 +1,25 @@
 let app = new Vue({
     el: '#app',
     data: {
-        message: 'みなさん、こんにちは！',
-        url: 'https://google.com',
-        flag: true,
-        email: 'Y-Suzuki@example.com'
-    },
-    // 演算した結果を取得する算出プロパティ
-    computed: {
-        localEmail_property: function() {
-            return this.email.split('@')[0].toLowerCase();
-        }
+        current: new Date().toLocaleString(),
     },
 
-    // emailプロパティの値を加工するlocalEmailメソッドを定義
+    computed: {
+        // 算出プロパティ経由で乱数を取得
+        randomc: function() {
+            return Math.random();
+        },
+    },
+
     methods: {
-        localEmail_method: function() {
-            return this.email.split('@')[0].toLowerCase();
+        // クリック時に処理を実行
+        onclick: function() {
+            this.current = new Date().toLocaleString();
+        },
+
+        // メソッド経由で乱数を取得
+        randomm: function(){
+            return Math.random();
         }
     },
 });
