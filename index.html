@@ -11,7 +11,8 @@
         <p v-pre>{{ message }}</p>
         <a :href="url">Google</a>
         <input type="button" value="クリック" :disabled="flag">
-        <p>{{ localEmail }}</p>
+        <p>{{ localEmail_property }}</p>
+        <p>{{ localEmail_method() }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>

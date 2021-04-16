@@ -8,8 +8,15 @@ let app = new Vue({
     },
     // 演算した結果を取得する算出プロパティ
     computed: {
-        localEmail: function() {
+        localEmail_property: function() {
             return this.email.split('@')[0].toLowerCase();
         }
-    }
+    },
+
+    // emailプロパティの値を加工するlocalEmailメソッドを定義
+    methods: {
+        localEmail_method: function() {
+            return this.email.split('@')[0].toLowerCase();
+        }
+    },
 });
