@@ -8,11 +8,7 @@
 </head>
 <body>
     <div id="app">
-        ライフサイクルフック
-        {{message}}
-        <form>
-            <input type="button" value="クリック" v-on:click="onclick">
-        </form>
+        <p>現在時刻：{{ current.toLocaleString() }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
