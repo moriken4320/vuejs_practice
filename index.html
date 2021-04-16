@@ -8,11 +8,8 @@
   </head>
   <body>
     <div id="app">
-        <!-- 入力値をnameプロパティにバインド -->
-      <label>名前：
-        <input type="text" v-model="name" />
-      </label>
-      <p>入力された値：{{ upperName }}</p>
+        <button v-on:mouseenter="onclick($event, 'ようこそ！')">クリック</button>
+        <p>{{ message }}</p>
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
