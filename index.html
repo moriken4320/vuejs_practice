@@ -12,11 +12,12 @@
   </head>
   <body>
     <div id="app">
-      <template v-for="s in songs">
-        <header>{{ s.title }}</header>
-        <div>{{ s.lyrics}}</div>
-        <footer>{{ s.composer }} 作曲</footer>
-      </template>
+      <form>
+          <input type="button" value="変更" v-on:click="onclick">
+      </form>
+      <ul>
+          <li v-for="item in list">{{ item }}</li>
+      </ul>
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
