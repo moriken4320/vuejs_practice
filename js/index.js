@@ -1,12 +1,10 @@
 let app = new Vue({
   el: "#app",
   data: {
-    list: ["赤パジャマ", "青パジャマ", "黄パジャマ"],
-  },
-  methods: {
-    onclick: function () {
-      // 配列の先頭要素を削除
-      this.list.shift();
-    },
+    attrs: {
+        size: 20,
+        maxlength: 14,
+        required: true //値を持たない属性を設定する場合、trueとしておく(falseの場合は属性が付与されない)
+    }
   },
 });

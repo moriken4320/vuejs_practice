@@ -13,11 +13,10 @@
   <body>
     <div id="app">
       <form>
-          <input type="button" value="変更" v-on:click="onclick">
+          <label for="memo">メモ：</label>
+          <!-- 属性情報をハッシュとして渡す場合、v-bindの引数は不要 -->
+          <input type="text" id="memo" v-bind="attrs">
       </form>
-      <ul>
-          <li v-for="item in list" v-bind:key="item">{{ item }}</li>
-      </ul>
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
