@@ -1,34 +1,22 @@
 let app = new Vue({
   el: "#app",
   data: {
-    books: [
-      {
-        isbn: "978-4-7981-5757-1",
-        title: "JavaScript逆引きレシピ",
-        price: 2000,
-      },
-      {
-        isbn: "978-4-7981-5757-2",
-        title: "Ruby逆引きレシピ",
-        price: 1000,
-      },
-      {
-        isbn: "978-4-7981-5757-3",
-        title: "PHP逆引きレシピ",
-        price: 4000,
-      },
-    ],
-    book: {
-      isbn: "978-4-7981-5757-1",
-      title: "JavaScript逆引きレシピ",
-      price: 2000,
-    },
-  },
-  computed: {
-      expensiveBooks: function(){
-          return this.books.filter(function(b){
-              return b.price >= 1500;
-          })
-      }
+    songs: [
+        {
+            title: '赤とんぼ',
+            lyrics: '夕焼け小焼けの赤とんぼ。。。',
+            composer: '山田工作'
+        },
+        {
+            title: '青とんぼ',
+            lyrics: '夕焼け小焼けの青とんぼ。。。',
+            composer: '山田工作'
+        },
+        {
+            title: '黄とんぼ',
+            lyrics: '夕焼け小焼けの黄とんぼ。。。',
+            composer: '山田工作'
+        },
+    ]
   },
 });

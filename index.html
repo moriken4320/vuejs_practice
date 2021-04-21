@@ -5,37 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue.js</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
   </head>
   <body>
     <div id="app">
-      
-        <table class="table">
-            <th>No.</th><th>ISBN</th><th>書名</th><th>価格</th>
-            <tr v-for="(b, i) in books">
-                <td>{{ i + 1 }}</td>
-                <td>{{ b.isbn }}</td>
-                <td>{{ b.title }}</td>
-                <td>{{ b.price }}円</td>
-            </tr>
-        </table>
-
-        <ul v-for="(value, key, i) in book">
-            <li>{{ key }} : {{ value }} : {{ i }}</li>
-        </ul>
-
-        <span v-for="i in 10">{{ i }}:</span>
-
-        <table class="table">
-            <th>No.</th><th>ISBN</th><th>書名</th><th>価格</th>
-            <tr v-for="(b, i) in expensiveBooks">
-                <td>{{ i + 1 }}</td>
-                <td>{{ b.isbn }}</td>
-                <td>{{ b.title }}</td>
-                <td>{{ b.price }}円</td>
-            </tr>
-        </table>
-
+      <template v-for="s in songs">
+        <header>{{ s.title }}</header>
+        <div>{{ s.lyrics}}</div>
+        <footer>{{ s.composer }} 作曲</footer>
+      </template>
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
