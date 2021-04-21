@@ -9,10 +9,8 @@
   <body>
     <div id="app">
       
-        <form>
-            <input ref="upfile" type="file" v-on:change="onchange">
-        </form>
-        <div>{{ message }}</div>
+        <label for="temperature">サウナの温度</label>
+        <input type="text" id="temperature" v-model.number="temperature" v-on:change="onchange">
 
     </div>
 
