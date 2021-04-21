@@ -12,11 +12,12 @@
   </head>
   <body>
     <div id="app">
-      <form>
-          <label for="memo">メモ：</label>
-          <!-- 属性情報をハッシュとして渡す場合、v-bindの引数は不要 -->
-          <input type="text" id="memo" v-bind="attrs">
-      </form>
+      <select v-model="attr">
+          <option value="height">高さ</option>
+          <option value="width">幅</option>
+      </select>
+      <input type="text" size="5" v-model="size" /><br />
+      <img src="https://wings.msn.to/image/wings.jpg" v-bind:[attr]="size" />
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
