@@ -1,13 +1,16 @@
 let app = new Vue({
   el: "#app",
   data: {
-    message: "",
+    myName: "匿名",
+    pet: "いぬ",
+    agree: true,
+    os: ["Windows"],
+    oss: [],
+    unit: {},
   },
-
   methods: {
-    onclick: function(e, message){
-        this.message = message;
-        console.log(e.target);
+    onchange: function(){
+          console.log(this.unit.name + '：' + this.unit.size);
+        }
     }
-  },
 });
