@@ -8,11 +8,19 @@
   </head>
   <body>
     <div id="app">
-      
-        <label for="name">氏名：</label>
-        <input type="text" id="name" v-model.lazy="myName">
-        <div>こんにちは、{{ myName }}さん！</div>
-
+      <form>
+        <label for="mail">メールアドレス：</label>
+        <textarea
+          id="mail"
+          v-bind:value="mails.join(';')"
+          v-on:input="mails=$event.target.value.split(';')"
+        ></textarea>
+      </form>
+      <ul>
+          <li v-for="mail in mails">
+              {{ mail }}
+          </li>
+      </ul>
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
