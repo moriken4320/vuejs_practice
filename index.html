@@ -8,69 +8,11 @@
   </head>
   <body>
     <div id="app">
-      <form>
-        <label for="name">氏名：</label>
-        <!-- v-modleを利用した場合、value属性を指定しても無視される。(ラジオもチェックボックスもプルダウンも) -->
-        <input type="text" id="name" v-model="myName" />
-      </form>
-      <div>こんにちは、{{ myName }}さん！</div>
-      <br />
-
-      <!-- ラジオボタン -->
-      <form>
-        <label for="dog">いぬ</label>
-        <input type="radio" id="dog" value="いぬ" v-model="pet" />
-        <br />
-        <label for="cat">ねこ</label>
-        <input type="radio" id="cat" value="ねこ" v-model="pet" />
-        <br />
-        <label for="other">その他</label>
-        <input type="radio" id="other" value="その他" v-model="pet" />
-      </form>
-      <div>{{ pet }}</div>
-
-      <!-- チェックボックス（単体） -->
-      <form>
-        <label for="agree">同意する：</label>
-        <input type="checkbox" id="agree" v-model="agree" />
-      </form>
-      <div>回答：{{ agree }}</div>
-
-      <!-- チェックボックス（複数） -->
-      <form>
-        <div>お使いのOSは？</div>
-        <label for="windows">Windows</label>
-        <input type="checkbox" id="windows" value="Windows" v-model="os" />
-        <label for="linux">Linux</label>
-        <input type="checkbox" id="linux" value="Linux" v-model="os" />
-        <label for="mac">macOS</label>
-        <input type="checkbox" id="mac" value="macOS" v-model="os" />
-      </form>
-      <p>回答：{{ os }}</p>
-
-      <!-- 選択ボックス -->
-      <form>
-        <label for="os">お使いのOSは？</label><br />
-        <select id="os" v-model="oss" multiple size="3">
-          <option v-bind:value="{name: ''}">OSを選択してください</option>
-          <option v-bind:value="{name: 'www'}">Windows</option>
-          <option v-bind:value="{name: 'lll'}">Linux</option>
-          <option v-bind:value="{name: 'mmm'}">macOS</option>
-        </select>
-      </form>
-      <p>回答：{{ oss }}</p>
-
-      <!-- オブジェクトをバインドする -->
-      <form>
-          <label for="million">百万：</label>
-          <input type="radio" id="million" v-model="unit" v-on:change="onchange" v-bind:value="{name: '百万', size: 1000000}">
-          <br>
-          <label for="billion">十億：</label>
-          <input type="radio" id="billion" v-model="unit" v-on:change="onchange" v-bind:value="{name: '十億', size: 1000000000}">
-          <br>
-          <label for="trillion">一兆：</label>
-          <input type="radio" id="trillion" v-model="unit" v-on:change="onchange" v-bind:value="{name: '一兆', size: 100000000000}">
-      </form>
+      
+        <form>
+            <input ref="upfile" type="file" v-on:change="onchange">
+        </form>
+        <div>{{ message }}</div>
 
     </div>
 
