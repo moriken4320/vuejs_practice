@@ -12,12 +12,7 @@
   </head>
   <body>
     <div id="app">
-      <select v-model="attr">
-          <option value="height">高さ</option>
-          <option value="width">幅</option>
-      </select>
-      <input type="text" size="5" v-model="size" /><br />
-      <img src="https://wings.msn.to/image/wings.jpg" v-bind:[attr]="size" />
+      <p v-html="message"></p>
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
