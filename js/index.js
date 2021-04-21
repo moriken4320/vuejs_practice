@@ -1,9 +1,9 @@
 let app = new Vue({
   el: "#app",
   data: {
-    mails: [],
+    show: true,
+    holiday: "",
+    pay: 'credit'
   },
-  methods: {
-    
-  },
+  methods: {},
 });
