@@ -12,7 +12,13 @@
   </head>
   <body>
     <div id="app">
-      <p v-html="message"></p>
+        <form>
+            <label for="name">氏名：</label>
+            <input type="text" id="name" v-model="name">
+        </form>
+        <!-- 初回だけしか反映されない -->
+        <div v-once>はじめまして、{{ name }}さん。</div>
+        <div>はじめまして、{{ name }}さん。</div>
     </div>
 
     <!-- lodashをインポート(これで_.debounceが使える) -->
