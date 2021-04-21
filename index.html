@@ -9,8 +9,9 @@
   <body>
     <div id="app">
       
-        <label for="memo">メモ：</label>
-        <input type="text" id="memo" v-model.trim="memo" v-on:change="onchange">
+        <label for="name">氏名：</label>
+        <input type="text" id="name" v-model.lazy="myName">
+        <div>こんにちは、{{ myName }}さん！</div>
 
     </div>
 
